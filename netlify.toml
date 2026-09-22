@@ -1,6 +1,7 @@
 [build]
-  command = "unzip -o assets.zip -d dist/assets && node build.mjs && node check-analytics.mjs"
+  command = "node build.mjs && unzip -o assets.zip -d dist/assets && node check-analytics.mjs"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
+
