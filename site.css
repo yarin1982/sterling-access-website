@@ -13,7 +13,7 @@
 .home-page .menu-toggle{display:block;background:none;border:0;flex-shrink:0}.home-page .menu-toggle span{background:white;height:3px}
 .home-page #mobile-menu{background:#031f36;color:white;top:78px}
 .arrival-hero{position:relative;isolation:isolate;aspect-ratio:1536/946;overflow:hidden;background:#071f35;color:white}
-.arrival-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+:is(.arrival-video,.arrival-still){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .arrival-hero:after{content:'';position:absolute;inset:60% 0 0;background:linear-gradient(transparent,#02101b55);pointer-events:none;z-index:0}
 .arrival-brand{position:absolute;top:4.6%;left:8.4%;width:43.2%;z-index:1;color:#04223c;text-align:center}
 .arrival-brand img{width:100%;height:auto}.arrival-brand p{font-size:clamp(12px,1.28vw,22px);font-weight:800;letter-spacing:.29em;margin:8px -20px 0;white-space:nowrap}.arrival-brand span{color:#049bdf}.arrival-brand em{color:#ff6500}
@@ -25,13 +25,13 @@
 .arrival-service svg{width:26%;height:auto;flex-shrink:0;padding-right:1.2vw;border-right:1px solid #ffffffaa}.arrival-service b{margin-left:auto;font-family:Arial;font-size:1.6em;font-weight:400}.arrival-service.locks{background:linear-gradient(135deg,#ff8000,#dd3c00);border-color:#ff8400}.arrival-service:hover{filter:brightness(1.13);transform:translateY(-2px)}
 .motion-control{position:absolute;left:18px;bottom:14px;z-index:2;background:#042139d9;border:1px solid #c6dce877;border-radius:20px;padding:7px 13px;color:white;font-size:12px;line-height:1.3}
 @media(max-width:1200px){.home-page .primary-nav{gap:16px}.home-page .header-inner{padding-inline:20px;gap:16px}.home-page .brand{flex-basis:175px}.home-page .brand img{width:175px}.home-page .header-call .button{min-width:150px;font-size:23px;padding-inline:22px}.arrival-service{min-height:78px;border-radius:13px}.arrival-brand p{letter-spacing:.21em}}
-@media(max-width:700px){.home-page .header-inner{height:76px;min-height:76px;padding-inline:14px}.home-page .brand{flex-basis:155px}.home-page .brand img{width:155px;height:66px}.home-page .header-call .button{display:flex;min-width:90px;font-size:19px;padding-inline:13px;border-radius:0 0 14px 14px}.home-page .menu-toggle{width:32px;padding:5px}.arrival-hero{aspect-ratio:auto;height:650px;max-height:none}.arrival-video{height:100%;object-fit:cover;object-position:44% center}.arrival-brand{top:25px;left:5%;width:90%}.arrival-brand p{font-size:12px;letter-spacing:.14em;margin:10px 0}.arrival-message{bottom:53px;padding:0 14px}.arrival-message h1{font-size:32px}.arrival-message>p{font-size:10px;letter-spacing:.24em;margin:9px 0 18px}.arrival-services{gap:10px}.arrival-service{width:50%;padding:13px 10px;gap:9px;font-size:15px;min-height:78px;border-width:2px;border-radius:11px}.arrival-service svg{width:29%;padding-right:8px}.arrival-service b{font-size:1.3em}.motion-control{font-size:11px;bottom:12px;left:14px}}
+@media(max-width:700px){.home-page .header-inner{height:76px;min-height:76px;padding-inline:14px}.home-page .brand{flex-basis:155px}.home-page .brand img{width:155px;height:66px}.home-page .header-call .button{display:flex;min-width:90px;font-size:19px;padding-inline:13px;border-radius:0 0 14px 14px}.home-page .menu-toggle{width:32px;padding:5px}.arrival-hero{aspect-ratio:auto;height:650px;max-height:none}:is(.arrival-video,.arrival-still){height:100%;object-fit:cover;object-position:44% center}.arrival-brand{top:25px;left:5%;width:90%}.arrival-brand p{font-size:12px;letter-spacing:.14em;margin:10px 0}.arrival-message{bottom:53px;padding:0 14px}.arrival-message h1{font-size:32px}.arrival-message>p{font-size:10px;letter-spacing:.24em;margin:9px 0 18px}.arrival-services{gap:10px}.arrival-service{width:50%;padding:13px 10px;gap:9px;font-size:15px;min-height:78px;border-width:2px;border-radius:11px}.arrival-service svg{width:29%;padding-right:8px}.arrival-service b{font-size:1.3em}.motion-control{font-size:11px;bottom:12px;left:14px}}
 /* Keep the parked truck clear of the headline and service controls. */
-.arrival-video{top:-10%;bottom:auto}
+:is(.arrival-video,.arrival-still){top:-10%;bottom:auto}
 .arrival-hero:after{inset:64% 0 0;background:linear-gradient(transparent 0%,#071f3522 35%,#071f35 75%)}
 .arrival-message h1,.arrival-service,.home-page .header-call .button{font-weight:500}
 @media(min-width:701px) and (max-width:1020px){.arrival-service{width:32%;font-size:18px}.arrival-message h1{font-size:36px}.arrival-message>p{margin-bottom:12px}.arrival-message{bottom:3%}.arrival-brand p{font-size:11px;letter-spacing:.15em}}
-@media(max-width:700px){.arrival-hero{height:620px;background:#071f35}.arrival-video{top:175px;height:auto;aspect-ratio:16/9;object-fit:contain}.arrival-brand{top:20px;left:5%;width:90%;color:white}.arrival-brand img{filter:drop-shadow(0 1px 1px #ffffff66)}.arrival-brand p{margin-top:5px}.arrival-hero:after{inset:340px 0 0;background:linear-gradient(transparent,#071f35 30%)}.arrival-message{bottom:57px}.arrival-message h1{font-size:30px}.arrival-service{font-size:17px}.home-page .header-inner{gap:9px}.home-page .brand img{filter:drop-shadow(0 0 1px #c2e7ff)}}
+@media(max-width:700px){.arrival-hero{height:620px;background:#071f35}:is(.arrival-video,.arrival-still){top:175px;height:auto;aspect-ratio:16/9;object-fit:contain}.arrival-brand{top:20px;left:5%;width:90%;color:white}.arrival-brand img{filter:drop-shadow(0 1px 1px #ffffff66)}.arrival-brand p{margin-top:5px}.arrival-hero:after{inset:340px 0 0;background:linear-gradient(transparent,#071f35 30%)}.arrival-message{bottom:57px}.arrival-message h1{font-size:30px}.arrival-service{font-size:17px}.home-page .header-inner{gap:9px}.home-page .brand img{filter:drop-shadow(0 0 1px #c2e7ff)}}
 @media(min-width:701px){.arrival-brand{top:0}.arrival-brand p{margin-top:-10px}}
 .home-page .brand img{filter:drop-shadow(0 0 1px #afdfff)}
 @media(max-width:700px){.arrival-brand{color:#04223c}.arrival-brand img{filter:none}.arrival-brand p{font-size:11px;letter-spacing:.1em}}
@@ -45,7 +45,7 @@
 /* Mobile branding sits on the actual scene, without a separate color panel. */
 @media(max-width:700px){
  .arrival-hero{height:auto;padding-top:56.25%;padding-bottom:52px;background:#071f35}
- .arrival-video{top:0;height:auto;aspect-ratio:16/9;object-fit:contain}
+ :is(.arrival-video,.arrival-still){top:0;height:auto;aspect-ratio:16/9;object-fit:contain}
  .arrival-brand{left:2.3%;top:0;width:60%}
  .arrival-brand p{font-size:clamp(8px,2.1vw,14px);letter-spacing:.08em;margin-top:-4px}
  .arrival-hero:after{inset:auto 0 auto;top:calc(56.25vw - 24px);height:25px;background:linear-gradient(transparent,#071f35)}
@@ -56,3 +56,6 @@
 .home-page .site-header .brand img{filter:none;height:66px;max-width:100%;object-fit:contain}
 @media(max-width:700px){.home-page .site-header .brand{padding:3px 6px}.home-page .site-header .brand img{height:58px}}
 .business-email{overflow-wrap:anywhere}.footer-grid>div>a[href^="tel:"]{font-size:1.3rem;color:white;text-decoration:none;font-weight:700}.footer-grid>div>a.business-email{display:block;font-size:1rem;font-weight:400;margin-top:12px;color:#dce6ed;text-decoration:underline;text-underline-offset:4px}.contact-email{margin:0 0 30px}.contact-email>span{display:block;color:var(--muted);font-size:.9rem}.contact-email .business-email{font-size:clamp(1rem,1.6vw,1.3rem);font-weight:700;text-underline-offset:4px}
+
+.arrival-still[hidden]{display:none}
+

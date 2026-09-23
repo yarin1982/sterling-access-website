@@ -23,12 +23,18 @@ if(form){
 const arrival=document.querySelector('.arrival-video');
 if(arrival){
  const control=document.querySelector('.motion-control');
+ const parked=document.querySelector('.arrival-still');
+ // Hold the corrected lettering after the original arrival film ends.
+ arrival.addEventListener('playing',()=>{if(parked)parked.hidden=true;});
+ arrival.addEventListener('ended',()=>{if(parked&&parked.complete&&parked.naturalWidth)parked.hidden=false;});
+ if(parked)parked.addEventListener('load',()=>{if(arrival.ended)parked.hidden=false;});
+ if(parked)parked.addEventListener('error',()=>{parked.hidden=true;});
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const label=()=>{const text=arrival.ended?'Replay arrival':arrival.paused?'Play arrival':'Pause arrival';control.textContent=text;control.setAttribute('aria-label',text);};
  const play=()=>{if(arrival.ended)arrival.currentTime=0;arrival.play().catch(label);};
  control.addEventListener('click',()=>{if(arrival.paused||arrival.ended)play();else arrival.pause();});
  ['play','pause','ended'].forEach(event=>arrival.addEventListener(event,label));
- arrival.addEventListener('error',()=>{control.hidden=true;});
+ arrival.addEventListener('error',()=>{control.hidden=true;if(parked&&parked.complete&&parked.naturalWidth)parked.hidden=false;});
  reduced.addEventListener('change',()=>{if(reduced.matches)arrival.pause();});
  if(!reduced.matches)play();
 }
