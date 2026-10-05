@@ -73,3 +73,6 @@
  .arrival-service svg{width:44px;padding-right:10px}
  .motion-control{bottom:15px;font-size:11px;padding:6px 10px}
 }
+
+/* Google reviews badge */
+.review-badge-preview{position:absolute;z-index:4;right:3%;top:0;width:clamp(154px,20.9vw,292px);display:block;line-height:0}.review-badge-preview img{width:100%;height:auto;display:block;filter:drop-shadow(1px 0 1px #001322) drop-shadow(-1px 0 1px #001322) drop-shadow(0 2px 1px #001322) drop-shadow(0 3px 5px rgba(0,10,25,.9))}.review-badge-preview:before{content:"";position:absolute;z-index:-1;left:21%;right:21%;top:70%;height:18%;background:radial-gradient(ellipse,rgba(0,18,35,.82),rgba(0,18,35,.38) 48%,transparent 73%);filter:blur(5px)}@media(max-width:700px){.review-badge-preview{top:27%;right:2%;width:27.5%}}
